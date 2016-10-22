@@ -46,6 +46,10 @@
     "files": [
         {
             "path": "ElmahIoDeploymentNotification"
+        },
+		{
+            "path": "images",
+            "addressable": true
         }
     ],
     "contributions": [
