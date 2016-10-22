@@ -1,0 +1,66 @@
+{
+    "manifestVersion": 1,
+    "id": "deploy-tasks",
+    "name": "elmah.io Deployment Tasks",
+    "version": "0.0.6",
+    "publisher": "elmahio",
+	"tags": ["Error", "Exception", "Reporting", "Management", "Logging", "ELMAH", "Diagnostics", "Tracing"],
+	"content": {
+		"details": {
+			"path": "overview.md"
+		}
+	},
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+	"links": {
+		"home": {
+			"uri": "https://elmah.io"
+		},
+		"getstarted": {
+			"uri": "http://docs.elmah.io/setup-deployment-tracking/#using-visual-studio-team-services"
+		},
+		"learn": {
+			"uri": "https://elmah.io/features"
+		},
+		"repository": {
+			"uri": "https://github.com/elmahio/Elmah.Io.VSTSExtensions"
+		},
+		"issues": {
+			"uri": "https://github.com/elmahio/Elmah.Io.VSTSExtensions/issues"
+		}
+	},
+	"branding": {
+		"color": "rgb(13, 165, 142)",
+		"theme": "dark"
+	},
+    "description": "Tools for notifying elmah.io about deployments on VSTS.",
+    "categories": [
+        "Build and release"
+    ],
+    "icons": {
+        "default": "extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "ElmahIoDeploymentNotification"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "elmah-io-vstsdeploy",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "ElmahIoDeploymentNotification"
+            }
+        }
+    ],
+	"galleryFlags": [
+		"Preview"
+	]
+}
