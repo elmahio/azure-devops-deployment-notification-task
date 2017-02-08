@@ -11,9 +11,9 @@
     ],
     "author": "elmah.io",
     "version": {
-        "Major": 0,
+        "Major": 3,
         "Minor": 0,
-        "Patch": 1
+        "Patch": 0
     },
     "demands": [],
     "minimumAgentVersion": "1.104.0",
