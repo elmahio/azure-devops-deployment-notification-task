@@ -19,4 +19,6 @@ This extension notifies elmah.io each time your create a new deployment from Vis
 5. Copy your API key from your [profile](https://elmah.io/profile) and paste it into the _API Key_ field. Click _Save_.
 ![VSTS task added](images/vsts_task_added.png)
 
+If deployments should show on a single log only, set the _Log ID_ field to the ID of the log. Deployments without a log ID, will show on all logs in the organization.
+
 That's it! VSTS will now notify elmah.io every time the release definition is executed.

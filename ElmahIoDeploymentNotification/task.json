@@ -24,7 +24,14 @@
             "label": "API Key",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "Input your elmah.io API key located on your [profile](https://elmah.io/profile)."
+            "helpMarkDown": "Input your elmah.io API key located on the organization settings page."
+        }, {
+            "name": "logId",
+            "type": "string",
+            "label": "Log ID",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "If the deployment should show on a single log only, set the ID of the log here."
         }
     ],
     "instanceNameFormat": "elmah.io Deployment Notification $(project)",

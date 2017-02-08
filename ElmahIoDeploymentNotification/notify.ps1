@@ -1,5 +1,6 @@
 param(
-    [string]$apiKey
+    [string]$apiKey,
+    [string]$logId
 )
 
 $ProgressPreference = "SilentlyContinue"
@@ -9,5 +10,6 @@ $body = @{
   version = $Env:RELEASE_RELEASENAME
   description = $Env:RELEASE_RELEASEDESCRIPTION
   userName = $Env:RELEASE_REQUESTEDFOR
+  logId = $logId
 }
 Invoke-RestMethod -Method Post -Uri $url -Body $body
