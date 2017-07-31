@@ -12,4 +12,9 @@ $body = @{
   userName = $Env:RELEASE_REQUESTEDFOR
   logId = $logId
 }
-Invoke-RestMethod -Method Post -Uri $url -Body $body
+Try {
+  Invoke-RestMethod -Method Post -Uri $url -Body $body
+}
+Catch {
+  Write-Error $_.Exception.Message -ErrorAction Continue
+}
