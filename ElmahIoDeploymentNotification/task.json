@@ -2,8 +2,8 @@
     "id": "EFC64D0A-03E0-4C64-A17C-7DD1AEC71FDD",
     "name": "ElmahIoDeploymentNotification",
     "friendlyName": "elmah.io Deployment Notification",
-    "description": "Notifies elmah.io on every deployment on VSTS.",
-    "helpMarkDown": "[More Information](https://docs.elmah.io/setup-deployment-tracking/#using-visual-studio-team-services-releases)",
+    "description": "Notifies elmah.io on every deployment on Azure DevOps.",
+    "helpMarkDown": "[More Information](https://docs.elmah.io/setup-deployment-tracking/#using-azure-devops-releases)",
     "category": "Deploy",
     "visibility": [
         "Package",
