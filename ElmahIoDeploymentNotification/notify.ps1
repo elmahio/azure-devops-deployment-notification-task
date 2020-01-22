@@ -1,13 +1,16 @@
 param(
     [string]$apiKey,
-    [string]$logId
+    [string]$logId,
+	[string]$version
 )
 
 $ProgressPreference = "SilentlyContinue"
 $url = 'https://api.elmah.io/v3/deployments?api_key=' + $apiKey
 
+$replaced = $ExecutionContext.InvokeCommand.ExpandString($version)
+
 $body = @{
-  version = $Env:RELEASE_RELEASENAME
+  version = $replaced
   description = $Env:RELEASE_RELEASEDESCRIPTION
   userName = $Env:RELEASE_REQUESTEDFOR
   logId = $logId
