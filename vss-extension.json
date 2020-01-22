@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "deploy-tasks",
     "name": "elmah.io Deployment Tasks",
-    "version": "3.1.1",
+    "version": "3.2.0",
     "publisher": "elmahio",
 	"tags": ["Error", "Exception", "Reporting", "Management", "Logging", "ELMAH", "Diagnostics", "Tracing"],
 	"content": {
@@ -20,10 +20,10 @@
 			"uri": "https://elmah.io"
 		},
 		"getstarted": {
-			"uri": "http://docs.elmah.io/setup-deployment-tracking/#using-visual-studio-team-services"
+			"uri": "https://docs.elmah.io/setup-deployment-tracking/#using-azure-devops-releases"
 		},
 		"learn": {
-			"uri": "https://elmah.io/features"
+			"uri": "https://elmah.io/features/"
 		},
 		"repository": {
 			"uri": "https://github.com/elmahio/Elmah.Io.VSTSExtensions"
@@ -36,7 +36,7 @@
 		"color": "rgb(13, 165, 142)",
 		"theme": "dark"
 	},
-    "description": "Tools for notifying elmah.io about deployments on VSTS.",
+    "description": "Tools for notifying elmah.io about deployments on Azure DevOps.",
     "categories": [
         "Build and release"
     ],
