@@ -1,8 +1,8 @@
-param(
-    [string]$apiKey,
-    [string]$logId,
-	[string]$version
-)
+Trace-VstsEnteringInvocation $MyInvocation
+
+$apiKey = Get-VstsInput -Name "apiKey" -Require
+$logId = Get-VstsInput -Name "logId"
+$version = Get-VstsInput -Name "version" -Require
 
 $ProgressPreference = "SilentlyContinue"
 $url = 'https://api.elmah.io/v3/deployments?api_key=' + $apiKey
