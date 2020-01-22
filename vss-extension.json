@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "deploy-tasks",
     "name": "elmah.io Deployment Tasks",
-    "version": "3.2.2",
+    "version": "3.2.3",
     "publisher": "elmahio",
 	"tags": ["Error", "Exception", "Reporting", "Management", "Logging", "ELMAH", "Diagnostics", "Tracing"],
 	"content": {
