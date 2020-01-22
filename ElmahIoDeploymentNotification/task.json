@@ -33,12 +33,12 @@
             "required": false,
             "helpMarkDown": "If the deployment should show on a single log only, set the ID of the log here."
         }, {
-			"name": "version",
-			"type": "string",
-			"label": "Version",
-			"defaultValue": "$Env:RELEASE_RELEASENAME",
-			"required": true,
-			"helpMarkDown": "Override to pick a custom naming scheme for your versions. Must be a valid PowerShell string."
+            "name": "version",
+            "type": "string",
+            "label": "Version",
+            "defaultValue": "$Env:RELEASE_RELEASENAME",
+            "required": true,
+            "helpMarkDown": "Override to pick a custom naming scheme for your versions. Must be a valid PowerShell string."
 		}
     ],
     "instanceNameFormat": "elmah.io Deployment Notification $(project)",
