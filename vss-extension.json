@@ -20,16 +20,16 @@
 			"uri": "https://elmah.io"
 		},
 		"getstarted": {
-			"uri": "https://docs.elmah.io/setup-deployment-tracking/#using-azure-devops-releases"
+			"uri": "https://docs.elmah.io/create-deployments-from-azure-devops-releases/"
 		},
 		"learn": {
 			"uri": "https://elmah.io/features/"
 		},
 		"repository": {
-			"uri": "https://github.com/elmahio/Elmah.Io.VSTSExtensions"
+			"uri": "https://github.com/elmahio/azure-devops-deployment-notification-task"
 		},
 		"issues": {
-			"uri": "https://github.com/elmahio/Elmah.Io.VSTSExtensions/issues"
+			"uri": "https://github.com/elmahio/azure-devops-deployment-notification-task/issues"
 		}
 	},
 	"branding": {
