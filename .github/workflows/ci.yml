@@ -27,3 +27,6 @@ jobs:
 
       - name: TfxInstaller
         uses: Maetis/github-action-tfxinstaller@v1.0.0-pre
+        
+      - name: Build extension
+        run: tfx extension create --manifest-globs vss-extension.json
