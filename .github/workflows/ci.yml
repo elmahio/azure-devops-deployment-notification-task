@@ -39,7 +39,7 @@ jobs:
           patch-syntax: |
             = /version/Major => "3"
             = /version/Minor => "3"
-            = /version/Patch => "{{ github.run_number }}"
+            = /version/Patch => "${{ github.run_number }}"
           fail-if-no-files-patched: true
 
       - name: TfxInstaller
@@ -66,6 +66,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./elmahio.deploy-tasks-3.3.{{ github.run_number }}.vsix
-          asset_name: elmahio.deploy-tasks-3.3.{{ github.run_number }}.vsix
+          asset_path: ./elmahio.deploy-tasks-3.3.${{ github.run_number }}.vsix
+          asset_name: elmahio.deploy-tasks-3.3.${{ github.run_number }}.vsix
           asset_content_type: application/zip
