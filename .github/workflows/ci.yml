@@ -28,5 +28,27 @@ jobs:
       - name: TfxInstaller
         uses: Maetis/github-action-tfxinstaller@v1.0.0-pre
         
-      - name: Build extension
+      - name: Build vsix
         run: tfx extension create --manifest-globs vss-extension.json
+
+      - name: Create the Release
+        id: create_release
+        if: ${{ github.event_name == 'push' }}
+        uses: actions/create-release@v1.1.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: 3.2.3.${{ github.run_number }}
+          release_name: Release 3.2.3.${{ github.run_number }}
+          draft: false
+
+      - name: Upload vsix
+        if: ${{ github.event_name == 'push' }}
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./elmahio.deploy-tasks-3.2.3.vsix
+          asset_name: elmahio.deploy-tasks-3.2.3.vsix
+          asset_content_type: application/zip
