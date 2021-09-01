@@ -7,7 +7,7 @@
 	"tags": ["Error", "Exception", "Reporting", "Management", "Logging", "ELMAH", "Diagnostics", "Tracing"],
 	"content": {
 		"details": {
-			"path": "overview.md"
+			"path": "README.md"
 		}
 	},
     "targets": [
