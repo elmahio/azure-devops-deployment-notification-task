@@ -4,50 +4,68 @@
     "name": "elmah.io Deployment Tasks",
     "version": "3.2.3",
     "publisher": "elmahio",
-	"tags": ["Error", "Exception", "Reporting", "Management", "Logging", "ELMAH", "Diagnostics", "Tracing"],
-	"content": {
-		"details": {
-			"path": "README.md"
-		}
-	},
+    "tags": [
+        "Error",
+        "Exception",
+        "Reporting",
+        "Management",
+        "Logging",
+        "ELMAH",
+        "Diagnostics",
+        "Tracing"
+    ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        }
+    },
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
         }
     ],
-	"links": {
-		"home": {
-			"uri": "https://elmah.io"
-		},
-		"getstarted": {
-			"uri": "https://docs.elmah.io/create-deployments-from-azure-devops-releases/"
-		},
-		"learn": {
-			"uri": "https://elmah.io/features/"
-		},
-		"repository": {
-			"uri": "https://github.com/elmahio/azure-devops-deployment-notification-task"
-		},
-		"issues": {
-			"uri": "https://github.com/elmahio/azure-devops-deployment-notification-task/issues"
-		}
-	},
-	"branding": {
-		"color": "rgb(13, 165, 142)",
-		"theme": "dark"
-	},
+    "links": {
+        "home": {
+            "uri": "https://elmah.io"
+        },
+        "getstarted": {
+            "uri": "https://docs.elmah.io/create-deployments-from-azure-devops-releases/"
+        },
+        "learn": {
+            "uri": "https://elmah.io/features/"
+        },
+        "repository": {
+            "uri": "https://github.com/elmahio/azure-devops-deployment-notification-task"
+        },
+        "issues": {
+            "uri": "https://github.com/elmahio/azure-devops-deployment-notification-task/issues"
+        },
+        "support": {
+            "uri": "https://elmah.io/contact/"
+        },
+        "license": {
+            "uri": "https://github.com/elmahio/azure-devops-deployment-notification-task/blob/main/LICENSE"
+        },
+        "privacypolicy": {
+            "uri": "https://elmah.io/legal/privacy-policy/"
+        }
+    },
+    "branding": {
+        "color": "rgb(13, 165, 142)",
+        "theme": "dark"
+    },
     "description": "Tools for notifying elmah.io about deployments on Azure DevOps.",
     "categories": [
         "Build and release"
     ],
     "icons": {
-        "default": "extension-icon.png"        
+        "default": "extension-icon.png"
     },
     "files": [
         {
             "path": "ElmahIoDeploymentNotification"
         },
-		{
+        {
             "path": "images",
             "addressable": true
         }
@@ -64,7 +82,7 @@
             }
         }
     ],
-	"galleryFlags": [
-		"Public"
-	]
+    "galleryFlags": [
+        "Public"
+    ]
 }
