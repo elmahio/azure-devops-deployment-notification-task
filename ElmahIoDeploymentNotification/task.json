@@ -44,7 +44,13 @@
     "instanceNameFormat": "elmah.io Deployment Notification $(project)",
     "execution": {
         "PowerShell3": {
-            "target": "notify.ps1"
+            "target": "notify.ps1",
+            "platforms": [
+                "windows",
+                "linux",
+                "darwin"
+            ],
+            "pwsh": true
         }
     }
 }
