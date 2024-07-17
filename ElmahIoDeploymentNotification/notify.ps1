@@ -17,15 +17,9 @@ if ($Env:RELEASE_RELEASENAME) {
   if (-not $version) {
     $version = $Env:BUILD_BUILDNUMBER
   }
-  $description = $BUILD_SOURCEVERSIONMESSAGE
-  $userName = $BUILD_SOURCEVERSIONAUTHOR
-  $userEmail = $BUILD_SOURCEVERSIONAUTHOREMAIL
-  if (-not $userEmail) {
-    $userEmail = $(git log -1 --pretty=format:'%ae')
-  }
-  if (-not $userName) {
-    $userName = $(git log -1 --pretty=format:'%an')
-  }
+  $description = $Env:BUILD_SOURCEVERSIONMESSAGE
+  $userName = $Env:BUILD_SOURCEVERSIONAUTHOR
+  $userEmail = $Env:BUILD_SOURCEVERSIONAUTHOREMAIL
 }
 
 $ProgressPreference = "SilentlyContinue"
