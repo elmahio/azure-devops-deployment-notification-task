@@ -31,11 +31,11 @@ $url = 'https://api.elmah.io/v3/deployments?api_key=' + $apiKey
 $replaced = $ExecutionContext.InvokeCommand.ExpandString($version)
 
 $body = @{
-  version = $replaced
-  description = $description
-  userName = $userName
-  userEmail = $userEmail
-  logId = $logId
+  "version" = $replaced
+  "description" = $description
+  "userName" = $userName
+  "userEmail" = $userEmail
+  "logId" = $logId
 }
 Try {
   Invoke-RestMethod -Method Post -Uri $url -Body $body
