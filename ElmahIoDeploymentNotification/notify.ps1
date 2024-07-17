@@ -23,6 +23,9 @@ if ($Env:RELEASE_RELEASENAME) {
   if (-not $userEmail) {
     $userEmail = $(git log -1 --pretty=format:'%ae')
   }
+  if (-not $userName) {
+    $userName = $(git log -1 --pretty=format:'%an')
+  }
 }
 
 $ProgressPreference = "SilentlyContinue"
@@ -38,7 +41,7 @@ $body = @{
   "logId" = $logId
 }
 Try {
-  Invoke-RestMethod -Method Post -Uri $url -Body $body
+  Invoke-RestMethod -Method Post -Uri $url -Body ($body | ConvertTo-Json)
 }
 Catch {
   Write-Error $_.Exception.Message -ErrorAction Continue
