@@ -29,7 +29,7 @@ jobs:
         uses: onlyutkarsh/patch-files-action@v1.0.3
         with:
           files: vss-extension.json
-          patch-syntax: = /version => "3.3.${{ github.run_number }}"
+          patch-syntax: = /version => "4.0.${{ github.run_number }}"
           fail-if-no-files-patched: true
 
       - name: Patch task.json
@@ -37,8 +37,8 @@ jobs:
         with:
           files: ElmahIoDeploymentNotification/task.json
           patch-syntax: |
-            = /version/Major => "3"
-            = /version/Minor => "3"
+            = /version/Major => "4"
+            = /version/Minor => "0"
             = /version/Patch => "${{ github.run_number }}"
           fail-if-no-files-patched: true
 
@@ -55,8 +55,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: 3.3.${{ github.run_number }}
-          release_name: Release 3.3.${{ github.run_number }}
+          tag_name: 4.0.${{ github.run_number }}
+          release_name: Release 4.0.${{ github.run_number }}
           draft: false
 
       - name: Upload vsix
@@ -66,6 +66,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./elmahio.deploy-tasks-3.3.${{ github.run_number }}.vsix
-          asset_name: elmahio.deploy-tasks-3.3.${{ github.run_number }}.vsix
+          asset_path: ./elmahio.deploy-tasks-4.0.${{ github.run_number }}.vsix
+          asset_name: elmahio.deploy-tasks-4.0.${{ github.run_number }}.vsix
           asset_content_type: application/zip
