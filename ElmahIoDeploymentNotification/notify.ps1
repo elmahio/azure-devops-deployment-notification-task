@@ -41,7 +41,7 @@ $body = @{
   "logId" = $logId
 }
 Try {
-  Invoke-RestMethod -Method Post -Uri $url -Body ($body | ConvertTo-Json)
+  Invoke-RestMethod -Method Post -Uri $url -Body $body
 }
 Catch {
   Write-Error $_.Exception.Message -ErrorAction Continue
