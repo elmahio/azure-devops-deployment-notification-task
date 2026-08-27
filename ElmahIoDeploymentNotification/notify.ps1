@@ -25,10 +25,8 @@ if ($Env:RELEASE_RELEASENAME) {
 $ProgressPreference = "SilentlyContinue"
 $url = 'https://api.elmah.io/v3/deployments?api_key=' + $apiKey
 
-$replaced = $ExecutionContext.InvokeCommand.ExpandString($version)
-
 $body = @{
-  "version" = $replaced
+  "version" = $version
   "description" = $description
   "userName" = $userName
   "userEmail" = $userEmail
